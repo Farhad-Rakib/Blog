@@ -1,0 +1,10 @@
+{% extends 'master.html'%}
+
+{% block content %}
+    {% for post in posts %}
+   
+         {% include 'partials/short_post.html' %}
+    {% endfor %}
+
+{% endblock %}
+
