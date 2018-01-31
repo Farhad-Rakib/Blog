@@ -1,16 +1,22 @@
 <a href="">
-    <a href='{% url "post_details" post.id %}'><h2>{{post.title }}<h2></a>
+    <a href='{% url "post_details" post.id %}'>
+        <h2>{{post.title }}
+            <h2>
+    </a>
 </a>
 <h5>
     <span class="glyphicon glyphicon-time"></span> Post by {{post.author}},{{ post.published | date:'M d, Y' }}.</h5>
 
 <br>
-<p>{{ post.content | truncatewords_html:40 | striptags }}</p>
-
-{% include 'partials/categories.html' %}
-
-<a href="{% url 'post_details' post.id %}" class="read-more">
+{{ post.content | truncatewords_html:40 | striptags }}
+<a href="{% url 'post_details' post.id %}" class="label" style="color:black;background: #d9d9d9;">
     Read More
     <i aria-hidden="true" class="fa fa-arrow-right"></i>
 </a>
+<p>
+    {% include 'partials/categories.html' %}
+</p>
+
+
+
 <hr>
