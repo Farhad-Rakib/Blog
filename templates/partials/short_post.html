@@ -1,5 +1,5 @@
 <a href="">
-    <h2>{{post.title }}</h2>
+    <a href='{% url "post_details" post.id %}'><h2>{{post.title }}<h2></a>
 </a>
 <h5>
     <span class="glyphicon glyphicon-time"></span> Post by {{post.author}},{{ post.published | date:'M d, Y' }}.</h5>
@@ -9,7 +9,7 @@
 
 {% include 'partials/categories.html' %}
 
-<a href="" class="read-more">
+<a href="{% url 'post_details' post.id %}" class="read-more">
     Read More
     <i aria-hidden="true" class="fa fa-arrow-right"></i>
 </a>
