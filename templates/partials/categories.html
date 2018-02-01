@@ -1,16 +1,8 @@
-<style>
-        .category {
-            padding: 4px 8px;
-            background: #d9d9d9;
-            margin-right: 6px;
-            display: inline-block;
-            color: black;
-        }
-</style>
-<p>{% for category in post.categories.all %}
+
+{% for category in post.categories.all %}
     <span class="label label-success category">
     
             <i class="fa fa-tag" aria-hidden="true"></i>{{category.name}}
         
     </span>
-    {% endfor %}</p>
+    {% endfor %}

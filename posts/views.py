@@ -6,7 +6,7 @@ from .models import Post
 
 def post_list(request):
     posts_list = Post.objects.filter(status = 'published').order_by('-published')
-    paginator = Paginator(posts_list, 25) # Show 25 contacts per page
+    paginator = Paginator(posts_list, 3) # Show 25 contacts per page
 
     page = request.GET.get('page')
     try:

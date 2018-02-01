@@ -1,20 +1,22 @@
-<a href="">
-    <a href='{% url "post_details" post.id %}'>
-        <h2>{{post.title }}
-            <h2>
-    </a>
+<a class="linkWithoutUnderLine title" href='{% url "post_details" post.id %}'>
+    <h2>{{post.title }}
+        <h2>
 </a>
-<h5>
-    <span class="glyphicon glyphicon-time"></span> Post by {{post.author}},{{ post.published | date:'M d, Y' }}.</h5>
 
+<h5 class="authorTag">
+    <span class="glyphicon glyphicon-time"></span> Post by {{post.author}},{{ post.published | date:'M d, Y' }}.
+     {% include 'partials/categories.html' %}
+</h5>
 <br>
-{{ post.content | truncatewords_html:40 | striptags }}
+<h5 class="contentFont">{{ post.content | safe |truncatewords_html:40}}</h5>
+
 <a href="{% url 'post_details' post.id %}" class="label" style="color:black;background: #d9d9d9;">
     Read More
     <i aria-hidden="true" class="fa fa-arrow-right"></i>
 </a>
+
 <p>
-    {% include 'partials/categories.html' %}
+   
 </p>
 
 

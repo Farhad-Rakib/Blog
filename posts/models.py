@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 from django.utils import timezone
+from djrichtextfield.models import RichTextField
 
 
 # Create your models here.
@@ -15,7 +16,7 @@ class Post(models.Model):
     categories = models.ManyToManyField('Category',blank=True)
     author = models.ForeignKey(User,related_name="blog_posts")
     title = models.CharField(max_length=250)
-    content = models.TextField()
+    content = RichTextField()
     status = models.CharField(max_length = 15,
                                 choices = STATUS_CHOICES,
                                 default="draft")

@@ -6,6 +6,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=EB+Garamond" rel="stylesheet">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="/static/css/blog.css" rel="stylesheet">
+  
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
@@ -14,33 +20,27 @@
 <body>
 
   <div class="container">
-    <style>
-      .blogHeader {
-        text-align: center;
-        font-weight: bolder;
-      }
-   
-    </style>
+  
     <div class="row header">
-      <div class="col-sm-3 "> </div>
-      <div class="col-sm-6 ">
+      <div class="col-sm-2 "> </div>
+      <div class="col-sm-8 ">
         <h2 class="blogHeader">Tech Mentor Blog</h2>
-        <h4 class="blogHeader">A technology Blog</h4>
+        <h4 class="blogSubHeader">A technology Blog</h4>
         <hr></hr>
 
       </div>
-      <div class="col-sm-3 "></div>
+      <div class="col-sm-2 "></div>
     </div>
     <div class="row content">
-      <div class="col-sm-3 "></div>
-      <div class="col-sm-6">
+      <div class="col-sm-2 "></div>
+      <div class="col-sm-8">
         {% block content %} {% endblock %}
         <footer class="footer">
-          <p class="blogHeader">All Rights Reserved@TechMentor</p>
+          <p >All Rights Reserved@TechMentor</p>
         </footer>
 
       </div>
-      <div class="col-sm-3 "></div>
+      <div class="col-sm-2 "></div>
     </div>
   </div>
 
