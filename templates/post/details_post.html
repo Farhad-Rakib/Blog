@@ -6,7 +6,7 @@
     <span class="glyphicon glyphicon-time" ></span> Post by {{post.author}},{{ post.published | date:'M d, Y' }}.</h5>
 
 <br>
-<p class="contentFont">{{ post.content| safe }}</p>
+<h5 class="contentFont">{{ post.content| safe }}</h5>
 
 {% include 'partials/categories.html' %}
 

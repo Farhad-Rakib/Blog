@@ -133,9 +133,10 @@ DJRICHTEXTFIELD_CONFIG = {
     'js': ['//tinymce.cachefly.net/4.1/tinymce.min.js'],
     'init_template': 'djrichtextfield/init/tinymce.js',
     'settings': {
-        'menubar': False,
+        'menubar': True,
         'plugins': 'link image',
         'toolbar': 'bold italic | link image | removeformat',
-        'width': 700
+        'toolbar1': 'formatselect | bold italic strikethrough forecolor backcolor | link | alignleft aligncenter alignright alignjustify  | numlist bullist outdent indent  | removeformat',
+        'width': 800
     }
 }
